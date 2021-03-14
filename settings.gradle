@@ -1,0 +1,4 @@
+include ':searchbardialogfragment'
+include ':modulesearchbardialogframgnet'
+include ':app'
+rootProject.name = "SearchBarDialogFragment"

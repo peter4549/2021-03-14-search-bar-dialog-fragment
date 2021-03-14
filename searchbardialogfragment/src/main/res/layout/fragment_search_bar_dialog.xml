@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="?attr/colorSurface"
+    android:gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:layoutDirection="rtl"
+                android:theme="@style/Widget.SearchView"
+                app:closeIcon="@drawable/ic_round_close_24"
+                app:searchIcon="@drawable/ic_round_search_24"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_view_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="?attr/colorOnSurface"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout" />
+
+    <TextView
+        android:id="@+id/text_view_no_results_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:textColor="?attr/colorOnSurface"
+        tools:text="No results found"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@id/recycler_view" />
+</RelativeLayout>

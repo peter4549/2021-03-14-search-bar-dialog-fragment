@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">16sp</item>
+        <item name="colorControlActivated">#FFffffff</item>
+    </style>
+</resources>
